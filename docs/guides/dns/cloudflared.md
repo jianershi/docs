@@ -51,18 +51,17 @@ cloudflared -v
 Here we are downloading the precompiled binary and copying it to the `/usr/local/bin/` directory to allow execution by the cloudflared user. Proceed to run the binary with the `-v` flag to check it is all working:
 
 ```bash
-wget https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-arm.tgz
-tar -xvzf cloudflared-stable-linux-arm.tgz
+wget -O cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-armv6
 sudo cp ./cloudflared /usr/local/bin
 sudo chmod +x /usr/local/bin/cloudflared
 cloudflared -v
 ```
 
-Note: Users [have reported](https://github.com/cloudflare/cloudflared/issues/38) that the current version of cloudflared produces a segementation fault error on Raspberry Pi Zero W, Model 1B and 2B. As a workaround you can use an older version provided at <https://bin.equinox.io/a/4SUTAEmvqzB/cloudflared-2018.7.2-linux-arm.tar.gz> instead.
+Note: Users [have reported](https://github.com/cloudflare/cloudflared/issues/38) that the current version of cloudflared produces a segmentation fault error on Raspberry Pi Zero W, Model 1B and 2B. As a workaround you can use an older version provided at <https://bin.equinox.io/a/4SUTAEmvqzB/cloudflared-2018.7.2-linux-arm.tar.gz> instead.
 
 #### `cloudflared` archive page
 
-You can find all `cloudflared` binary releases on <https://dl.equinox.io/cloudflare/cloudflared/stable/archive>.
+You can find all `cloudflared` binary releases on <https://github.com/cloudflare/cloudflared/releases>.
 
 ### Configuring `cloudflared` to run on startup
 
